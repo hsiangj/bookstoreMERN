@@ -10,6 +10,9 @@ const booksRoutes = require("./routes/booksRoute");
 
 // Middleware for parsing request body
 app.use(express.json());
+// Middleware for handling CORS policy
+app.use(cors());
+
 app.use('/books', booksRoutes);
 
 app.get('/', (req, res) => {
